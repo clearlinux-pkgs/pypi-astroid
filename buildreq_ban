@@ -1,0 +1,7 @@
+# This file contains build requirements that get picked up but are
+# undesirable. One entry per line, no whitespace.
+enum34
+lazy-object-proxy-python
+singledispatch-python
+backports.functools_lru_cache
+typed-ast

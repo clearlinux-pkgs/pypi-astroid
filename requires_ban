@@ -1,0 +1,5 @@
+# This file contains runtime requirements that get picked up but are
+# undesirable. One entry per line, no whitespace.
+backports.functools_lru_cache
+enum34
+typed-ast
