@@ -4,7 +4,7 @@
 #
 Name     : pypi-astroid
 Version  : 2.9.0
-Release  : 137
+Release  : 138
 URL      : https://files.pythonhosted.org/packages/ee/9b/b1d4515d1a969e96954d888df4e274d487c277812573ccbbb137109b066e/astroid-2.9.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/9b/b1d4515d1a969e96954d888df4e274d487c277812573ccbbb137109b066e/astroid-2.9.0.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
@@ -24,6 +24,7 @@ BuildRequires : pypi(setuptools)
 BuildRequires : pypi(wrapt)
 BuildRequires : six
 BuildRequires : typed_ast
+Provides: astroid
 
 %description
 No detailed description available
