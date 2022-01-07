@@ -4,7 +4,7 @@
 #
 Name     : pypi-astroid
 Version  : 2.9.0
-Release  : 138
+Release  : 139
 URL      : https://files.pythonhosted.org/packages/ee/9b/b1d4515d1a969e96954d888df4e274d487c277812573ccbbb137109b066e/astroid-2.9.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/9b/b1d4515d1a969e96954d888df4e274d487c277812573ccbbb137109b066e/astroid-2.9.0.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
@@ -17,14 +17,9 @@ Requires: six
 Requires: typed_ast
 Requires: wrapt
 BuildRequires : buildreq-distutils3
-BuildRequires : lazy-object-proxy
-BuildRequires : logilab-common
 BuildRequires : pypi(lazy_object_proxy)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(wrapt)
-BuildRequires : six
-BuildRequires : typed_ast
-Provides: astroid
 
 %description
 No detailed description available
@@ -68,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641409886
+export SOURCE_DATE_EPOCH=1641520846
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
