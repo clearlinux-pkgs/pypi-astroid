@@ -4,7 +4,7 @@
 #
 Name     : pypi-astroid
 Version  : 2.10.0
-Release  : 142
+Release  : 143
 URL      : https://files.pythonhosted.org/packages/d4/de/40b9ab64360c707faa466c9624e3bda945fca2672cb85850b877de29c484/astroid-2.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d4/de/40b9ab64360c707faa466c9624e3bda945fca2672cb85850b877de29c484/astroid-2.10.0.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
@@ -60,13 +60,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1646063510
+export SOURCE_DATE_EPOCH=1646934096
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
 export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
+pypi-dep-fix.py . wrapt
 python3 setup.py build
 
 %check
@@ -80,6 +81,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-astroid
 cp %{_builddir}/astroid-2.10.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-astroid/83baf0020e7e2a77169bbf1111f5f9fcb418abca
 python3 -tt setup.py build  install --root=%{buildroot}
+pypi-dep-fix.py %{buildroot} wrapt
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
