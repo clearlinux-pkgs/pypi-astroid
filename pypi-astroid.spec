@@ -4,7 +4,7 @@
 #
 Name     : pypi-astroid
 Version  : 2.12.12
-Release  : 170
+Release  : 171
 URL      : https://files.pythonhosted.org/packages/be/61/5a97efa0622b3413e3d01d6bc6b019a87bcc23058c378dbd24b8c2474860/astroid-2.12.12.tar.gz
 Source0  : https://files.pythonhosted.org/packages/be/61/5a97efa0622b3413e3d01d6bc6b019a87bcc23058c378dbd24b8c2474860/astroid-2.12.12.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
