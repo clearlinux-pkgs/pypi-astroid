@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-astroid
-Version  : 2.15.4
-Release  : 184
-URL      : https://files.pythonhosted.org/packages/36/50/c2bde258f4b8021ee9075932ace925245a1ad9a816a0cab269f04f480c3b/astroid-2.15.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/36/50/c2bde258f4b8021ee9075932ace925245a1ad9a816a0cab269f04f480c3b/astroid-2.15.4.tar.gz
+Version  : 2.15.5
+Release  : 185
+URL      : https://files.pythonhosted.org/packages/e9/8d/338debdfc65383c2e1a0eaf336810ced0e8bc58a3f64d8f957cfb7b19e84/astroid-2.15.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/e9/8d/338debdfc65383c2e1a0eaf336810ced0e8bc58a3f64d8f957cfb7b19e84/astroid-2.15.5.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
@@ -15,6 +15,8 @@ Requires: pypi-astroid-license = %{version}-%{release}
 Requires: pypi-astroid-python = %{version}-%{release}
 Requires: pypi-astroid-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(setuptools)
+BuildRequires : pypi(wheel)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -56,10 +58,10 @@ python3 components for the pypi-astroid package.
 
 
 %prep
-%setup -q -n astroid-2.15.4
-cd %{_builddir}/astroid-2.15.4
+%setup -q -n astroid-2.15.5
+cd %{_builddir}/astroid-2.15.5
 pushd ..
-cp -a astroid-2.15.4 buildavx2
+cp -a astroid-2.15.5 buildavx2
 popd
 
 %build
@@ -67,12 +69,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682349915
+export SOURCE_DATE_EPOCH=1684173749
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 pypi-dep-fix.py . wrapt
 python3 -m build --wheel --skip-dependency-check --no-isolation
