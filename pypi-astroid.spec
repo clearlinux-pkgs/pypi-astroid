@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-astroid
-Version  : 2.15.7
-Release  : 187
-URL      : https://files.pythonhosted.org/packages/b0/71/020621f87a7b8c81f1b1547e83622f42262efd4ed988d2971d48bda304e1/astroid-2.15.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b0/71/020621f87a7b8c81f1b1547e83622f42262efd4ed988d2971d48bda304e1/astroid-2.15.7.tar.gz
+Version  : 2.15.8
+Release  : 188
+URL      : https://files.pythonhosted.org/packages/58/3d/c18b0854d0d2eb3aca20c149cff5c90e6b84a5366066768d98636f5045ed/astroid-2.15.8.tar.gz
+Source0  : https://files.pythonhosted.org/packages/58/3d/c18b0854d0d2eb3aca20c149cff5c90e6b84a5366066768d98636f5045ed/astroid-2.15.8.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
@@ -50,18 +50,16 @@ Summary: python3 components for the pypi-astroid package.
 Group: Default
 Requires: python3-core
 Provides: pypi(astroid)
-Requires: pypi(lazy_object_proxy)
-Requires: pypi(wrapt)
 
 %description python3
 python3 components for the pypi-astroid package.
 
 
 %prep
-%setup -q -n astroid-2.15.7
-cd %{_builddir}/astroid-2.15.7
+%setup -q -n astroid-2.15.8
+cd %{_builddir}/astroid-2.15.8
 pushd ..
-cp -a astroid-2.15.7 buildavx2
+cp -a astroid-2.15.8 buildavx2
 popd
 
 %build
@@ -69,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695653727
+export SOURCE_DATE_EPOCH=1695741278
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
