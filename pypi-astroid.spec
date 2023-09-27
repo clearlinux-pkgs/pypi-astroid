@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-astroid
-Version  : 2.15.8
-Release  : 188
-URL      : https://files.pythonhosted.org/packages/58/3d/c18b0854d0d2eb3aca20c149cff5c90e6b84a5366066768d98636f5045ed/astroid-2.15.8.tar.gz
-Source0  : https://files.pythonhosted.org/packages/58/3d/c18b0854d0d2eb3aca20c149cff5c90e6b84a5366066768d98636f5045ed/astroid-2.15.8.tar.gz
+Version  : 3.0.0
+Release  : 189
+URL      : https://files.pythonhosted.org/packages/60/f7/536d171ce4e334b0ceec9720c016f59f2c75d986e4dbc52b34601cd7834a/astroid-3.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/60/f7/536d171ce4e334b0ceec9720c016f59f2c75d986e4dbc52b34601cd7834a/astroid-3.0.0.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
@@ -24,8 +24,8 @@ BuildRequires : pypi(wheel)
 %description
 Astroid
 =======
-.. image:: https://codecov.io/gh/PyCQA/astroid/branch/main/graph/badge.svg?token=Buxy4WptLb
-:target: https://codecov.io/gh/PyCQA/astroid
+.. image:: https://codecov.io/gh/pylint-dev/astroid/branch/main/graph/badge.svg?token=Buxy4WptLb
+:target: https://codecov.io/gh/pylint-dev/astroid
 :alt: Coverage badge from codecov
 
 %package license
@@ -56,10 +56,10 @@ python3 components for the pypi-astroid package.
 
 
 %prep
-%setup -q -n astroid-2.15.8
-cd %{_builddir}/astroid-2.15.8
+%setup -q -n astroid-3.0.0
+cd %{_builddir}/astroid-3.0.0
 pushd ..
-cp -a astroid-2.15.8 buildavx2
+cp -a astroid-3.0.0 buildavx2
 popd
 
 %build
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695741278
+export SOURCE_DATE_EPOCH=1695825303
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
