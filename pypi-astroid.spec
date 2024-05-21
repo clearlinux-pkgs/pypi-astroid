@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-astroid
-Version  : 3.2.1
-Release  : 199
-URL      : https://files.pythonhosted.org/packages/c0/8c/3bdbdc8f0c37cf105d6758574f4650c960f57e40d08c5c0ac78a06e515d5/astroid-3.2.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/c0/8c/3bdbdc8f0c37cf105d6758574f4650c960f57e40d08c5c0ac78a06e515d5/astroid-3.2.1.tar.gz
+Version  : 3.2.2
+Release  : 200
+URL      : https://files.pythonhosted.org/packages/27/8f/79adb88627d194824decf7b9f4dde9e059b251a7b76809c99f4803be258e/astroid-3.2.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/27/8f/79adb88627d194824decf7b9f4dde9e059b251a7b76809c99f4803be258e/astroid-3.2.2.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
@@ -58,10 +58,10 @@ python3 components for the pypi-astroid package.
 
 
 %prep
-%setup -q -n astroid-3.2.1
-cd %{_builddir}/astroid-3.2.1
+%setup -q -n astroid-3.2.2
+cd %{_builddir}/astroid-3.2.2
 pushd ..
-cp -a astroid-3.2.1 buildavx2
+cp -a astroid-3.2.2 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1715872558
+export SOURCE_DATE_EPOCH=1716262246
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
