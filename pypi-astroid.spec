@@ -7,7 +7,7 @@
 #
 Name     : pypi-astroid
 Version  : 3.3.8
-Release  : 211
+Release  : 212
 URL      : https://files.pythonhosted.org/packages/80/c5/5c83c48bbf547f3dd8b587529db7cf5a265a3368b33e85e76af8ff6061d3/astroid-3.3.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/80/c5/5c83c48bbf547f3dd8b587529db7cf5a265a3368b33e85e76af8ff6061d3/astroid-3.3.8.tar.gz
 Summary  : An abstract syntax tree for Python with inference support.
